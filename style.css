@@ -1,0 +1,617 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    padding: 0 10%;
+    background: #f7efef;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    position: relative;
+    z-index: 100;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #3f51b5b6;
+}
+
+nav ul li a:hover {
+    color: #354bc5;
+}
+
+.text-box {
+    margin-top: 130px;
+    max-width: 600px;
+}
+
+.text-box h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: #3f51b5;
+}
+
+.text-box a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background: #3f51b5d3;
+    padding: 10px 30px;
+    font-size: 18px;
+    margin-top: 50px;
+    border-radius: 6px;
+}
+
+.text-box a:hover {
+    background: #3f51b5;
+}
+
+.user-box {
+    background: #d9e0ff;
+    position: absolute;
+    top: 0;
+    right: 12%;
+}
+
+.user-box img {
+    display: block;
+    padding-top: 100px;
+    width: 410px;
+    margin-bottom: -205px;
+}
+
+.gallery {
+    width: 100%;
+}
+
+.gallery-container {
+    align-items: center;
+    display: flex;
+    height: 400px;
+    margin: 0 auto;
+    max-width: 1000px;
+    position: relative;
+}
+
+.gallery-item {
+    height: 200px;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    width: 330px;
+    z-index: 0;
+    border-radius: 15px;
+    background-size: contain;
+}
+
+
+/* .gallery-item-1 {
+    left: 15%;
+    opacity: .4;
+    transform: translateX(-50%);
+} */
+
+
+/* .gallery-item-2, */
+
+.gallery-item-5 {
+    height: 250px;
+    opacity: 0.8;
+    width: 380px;
+    z-index: 1;
+    right: 65%;
+}
+
+
+/* .gallery-item-2 {
+    left: 30%;
+    transform: translateX(-50%);
+} */
+
+.gallery-item-3 {
+    box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, 0.35);
+    height: 300px;
+    opacity: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 430px;
+    z-index: 2;
+}
+
+
+/* .gallery-item-4 {
+    left: 40%;
+    transform: translateX(-50%);
+} */
+
+.gallery-item-1 {
+    left: 86%;
+    opacity: .9;
+    transform: translateX(-50%);
+}
+
+.gallery-controls {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+    height: 100px;
+}
+
+.gallery-controls button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 30px;
+    margin: 0 50px;
+    padding: 0 12px;
+    text-transform: capitalize;
+}
+
+.gallery-controls-button:focus {
+    outline: none;
+}
+
+.gallery-controls-previous {
+    position: relative;
+}
+
+.gallery-controls-previous::before {
+    border: solid #000;
+    border-width: 0 5px 5px 0;
+    content: '';
+    display: inline-block;
+    height: 5px;
+    left: -30px;
+    padding: 10px;
+    position: absolute;
+    top: 25%;
+    transform: rotate(135deg) translateY(-50%);
+    transition: left 0.15s ease-in-out;
+    width: 5px;
+}
+
+.gallery-controls-previous:hover::before {
+    left: -40px;
+}
+
+.gallery-controls-next {
+    position: relative;
+}
+
+.gallery-controls-next::before {
+    border: solid #000;
+    border-width: 0 5px 5px 0;
+    content: '';
+    display: inline-block;
+    height: 5px;
+    padding: 10px;
+    position: absolute;
+    right: -30px;
+    top: 45;
+    transform: rotate(-45deg) translateY(-50%);
+    transition: right 0.15s ease-in-out;
+    width: 5px;
+}
+
+.gallery-controls-next:hover:before {
+    right: -40px;
+}
+
+.gallery-nav {
+    bottom: -15px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.gallery-nav li {
+    background: #ccc;
+    border-radius: 50%;
+    height: 10px;
+    margin: 0 16px;
+    width: 10px;
+}
+
+.gallery-nav li.gallery-item-selected {
+    background: #555;
+}
+
+.hr-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 26vh;
+}
+
+.hr-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 21vh;
+}
+
+.hr1 {
+    border: hidden;
+    border-radius: 10px;
+    width: 280px;
+    box-shadow: 0px 5px 20px #0424daf5;
+}
+
+.hr2,
+.hr3 {
+    transform: rotate(90deg);
+    height: 200px;
+    box-shadow: 0px 5px 20px #0424daf5;
+}
+
+.div-body {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0;
+}
+
+.animated-text {
+    font-size: 34px;
+    min-width: 180px;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.animated-text span {
+    position: relative;
+}
+
+.animated-text span::before {
+    content: "DEALS";
+    color: #ff7f50;
+    animation: words 15s infinite;
+}
+
+.animated-text span::after {
+    content: '';
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 4px solid #ff7f50;
+    right: -17px;
+    animation: cursor .9s infinite, typing 2.98s steps(14) infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 2px solid #ff7f5000;
+    }
+}
+
+@keyframes words {
+
+    0%,
+    20% {
+        content: "DEALS";
+    }
+
+    21%,
+    40% {
+        content: "QUALITY";
+    }
+
+    41%,
+    60% {
+        content: "BRANDS";
+    }
+
+    61%,
+    80% {
+        content: "CUSTOM-BUILT";
+    }
+
+    81%,
+    100% {
+        content: "NOTCH";
+    }
+
+}
+
+@keyframes typing {
+
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+        width: 0;
+    }
+
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+        width: calc(100%+ 8px);
+    }
+}
+
+.image-deals {
+    width: 100%;
+    height: 100%;
+    background: #f2e9ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.gallery-deals {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-box {
+    width: 100px;
+    height: 400px;
+    margin: 10px;
+    border-radius: 50px;
+    background: url(https://wisestore.in/wp-content/uploads/2024/03/Untitled-design-_1_.webp);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: width 0.5s;
+}
+
+.img-box:nth-child(2) {
+    background: url(https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/744ece1f3b074d4d8ff18c1c24dc1e2a_9366/Own_the_Run_3-Stripes_Pants_Multicolor_IK4982_HM30.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img-box:nth-child(3) {
+    background: url(https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/88307d779fff4f3a92154b87dd5fff58_9366/vac-run-shoes.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img-box:nth-child(4) {
+    background: url(https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/486d1232144c454ba6b9cd03a1ef4753_9366/Real_Madrid_24-25_Home_Jersey_White_IU5011_HM30.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img-box h3 {
+    color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    opacity: 0;
+    transition: bottom 0.5s, opacity 0.5s;
+    font-family: "Abel", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.img-box:hover {
+    width: 300px;
+    cursor: pointer;
+
+}
+
+.img-box:hover h3 {
+    opacity: 1;
+    bottom: 25px;
+}
+
+.body-footer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background: #f2e9ff; */
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    /* bottom: 0; */
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    color: #fff;
+    padding: 100px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+footer p,
+h3,
+h4,
+a,
+input {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.row {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.col {
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+.col :nth-child(2),.col :nth-child(3) {
+    flex-basis: 45%;
+
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 30px;
+}
+
+.col h3 {
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+
+}
+
+.email-id {
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+
+}
+
+ul li {
+    list-style: none;
+    margin-bottom: 12px;
+
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+form {
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+
+form .fa-solid {
+    font-size: 18px;
+    margin-right: 10px;
+
+}
+
+form input {
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+}
+
+form button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    
+}
+
+form button .fa-solid {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.social-icons .fa-brands {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #ffffff;
+    /* background: #fff; */
+    margin-right: 15px;
+    cursor: pointer;
+}
+.hr001{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+.copyright{
+    text-align: center;
+}
+.underline{
+    width: 100%;
+    height: 2px;
+    background: #767676;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+}
+.underline span{
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+
+}
+@keyframes moving{
+     0%{
+        left: -20px;
+     }
+     100%{
+        left: 100%;
+     }
+}
+@media(max-width:700px){
+    footer{
+        bottom: unset;
+    }
+    .col {
+        flex-basis: 100%;
+    }
+    
+    .col :nth-child(2),.col :nth-child(3) {
+        flex-basis: 100%;
+    
+    }
+}

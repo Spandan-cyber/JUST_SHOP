@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+} 
+
+.about-section {
+    background: url(premium_vector-1721296174159-056282dce3e8-removebg-preview.png) no-repeat left;
+    background-size: 40%;
+    background-color: #fdfdfd;
+    overflow: hidden;
+    padding:0;
+}
+
+.inner-container {
+    width: 55%;
+    float: right;
+    background: linear-gradient(270deg, #ff994f,#fa6d86);
+    padding: 150px;
+}
+
+.inner-container h1 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.text {
+    font-size: 15px;
+    color: #545454;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+@media screen and (max-width:1200px) {
+    .inner-container {
+        padding: 80px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .about-section {
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+
+    .inner-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .about-section {
+        padding: 0;
+    }
+
+    .inner-container {
+        padding: 60px;
+    }
+}
+.about{
+    border: none;
+    width: 65px;
+    height: 5px;
+    background-color: #6a040f;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.head{
+    display: flex;
+    top: 100px;
+}
+button{
+    display: flex;
+    align-items: center;
+    position: left top;
+    padding: 15px 30px;
+    font-size: 20px;
+    color: #fff;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    /* background: linear-gradient(270deg,#6a040f,#fa6d86); */
+    color: #6a040ea9;
+    background: transparent;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: -20px;
+    padding-left: 22px
+}
+button:hover{
+    color: #6a040f;
+}
